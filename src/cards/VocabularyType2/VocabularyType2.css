@@ -5,6 +5,12 @@ button.undo-swipe {
   top: 20px;
   right: 20px;
 }
+.typetwo-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .flash-done {
   display: flex;

@@ -143,7 +143,7 @@ const VocabularyCardSecond = () => {
   };
 
   return (
-    <>
+    <div className="typetwo-card-container">
       <div className="flash-cards">
         <div className="flash-done">
           <h1>You are doing well!!!</h1>
@@ -165,7 +165,7 @@ const VocabularyCardSecond = () => {
       <button className="undo-swipe" onClick={handleUndo}>
         undo
       </button>
-    </>
+    </div>
   );
 };
 
