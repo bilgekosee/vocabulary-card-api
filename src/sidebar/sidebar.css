@@ -4,3 +4,25 @@
   max-height: 100%;
   border-radius: 0 40px 40px 0px;
 }
+.name-site {
+  padding: 5px;
+  font-family: "Bungee Tint", cursive;
+  display: flex;
+  justify-content: center;
+}
+.name-site span {
+  font-size: 30px;
+  background: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card-type-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.card-title {
+  color: #1f2937;
+}
