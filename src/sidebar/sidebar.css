@@ -1,28 +1,110 @@
 .sidebar-card {
+  display: flex;
+  flex-direction: column;
   max-width: 350px;
   background-color: #f0f4f8;
-  max-height: 100%;
+  min-height: 100vh;
   border-radius: 0 40px 40px 0px;
 }
+.sidebar-card.close {
+  max-width: 70px;
+}
+
 .name-site {
-  padding: 5px;
+  padding: 15px;
   font-family: "Bungee Tint", cursive;
   display: flex;
   justify-content: center;
 }
-.name-site span {
-  font-size: 30px;
+.site-name-title {
+  font-size: 25px;
   background: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.card-type-sidebar {
+.site-name-title:hover {
+  font-size: 25px;
+  background: linear-gradient(to top, #898fc3 0%, #878ba6 1%, #be74d9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.card-title {
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 18px;
+}
+.tab {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
 }
-.card-title {
+
+.type-cards-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  max-width: 350px;
+  height: 50px;
+}
+.type-cards-wrapper:hover {
+  background-color: #878ba61a;
+  border-radius: 10px;
+}
+
+.cardsand-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+ul,
+li {
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  animation: fade-in 0.3s ease;
+  color: #1f2937;
+  font-size: 16px;
+  padding: 5px 0;
+}
+.submenu li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  gap: 20px;
+  padding: 10px 0;
+  font-size: 18px;
+  color: #1f2937;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.submenu li:hover {
+  background-color: #878ba61a;
+  border-radius: 10px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cards-icon {
+  font-size: 30px;
   color: #1f2937;
 }
