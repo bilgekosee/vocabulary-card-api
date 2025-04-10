@@ -1,0 +1,114 @@
+.third-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bebas Neue", sans-serif;
+  color: #f0ebd8;
+}
+.third-card-wrapper {
+  width: 397px;
+  height: 640px;
+  border-radius: 20px;
+  background-color: #0d1321;
+}
+.third-card-title-wrapper {
+  width: 397px;
+  height: 200px;
+  border-radius: 20px 20px 0px 0px;
+  background-color: #1d2d44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.third-card-title {
+  font-size: 40px;
+  font-weight: 500;
+}
+.control-icons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  font-size: 40px;
+  animation: fadeInPop 0.5s ease;
+}
+
+.ok-button,
+.reject-button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.ok-button {
+  color: green;
+  animation: popSuccess 0.6s ease;
+}
+
+.reject-button {
+  color: red;
+  animation: popReject 0.6s ease;
+}
+
+.ok-button:hover,
+.reject-button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes popSuccess {
+  0% {
+    transform: scale(0.5) rotate(-30deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2) rotate(10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes popReject {
+  0% {
+    transform: scale(0.5) rotate(30deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2) rotate(-10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+.translate-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
+.translate-content {
+  font-size: 15px;
+  font-weight: lighter;
+  color: #748cab;
+}
+.false-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 90px;
+}
+.answer {
+  font-size: 30px;
+}

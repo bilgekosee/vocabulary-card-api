@@ -51,7 +51,7 @@ const Header = () => {
           <ul className="submenu">
             <li onClick={() => navigate("/card-type-1")}>Card Type 1</li>
             <li onClick={() => navigate("/card-type-2")}>Card Type 2</li>
-            <li>Card Type 3</li>
+            <li onClick={() => navigate("/card-type-3")}>Card Type 3</li>
             <li>Card Type 4</li>
           </ul>
         )}
