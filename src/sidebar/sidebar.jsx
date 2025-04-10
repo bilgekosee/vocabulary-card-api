@@ -3,11 +3,14 @@ import "./sidebar.css";
 import { TbCardsFilled } from "react-icons/tb";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { GiRead } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setİsOpen] = useState(true);
   const [open, setOpen] = useState(true);
   const [readinOpen, setReadingOpen] = useState(true);
+
+  const navigate = useNavigate();
 
   const toggleOpen = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -46,8 +49,8 @@ const Header = () => {
 
         {open && (
           <ul className="submenu">
-            <li>Card Type 1</li>
-            <li>Card Type 2</li>
+            <li onClick={() => navigate("/card-type-1")}>Card Type 1</li>
+            <li onClick={() => navigate("/card-type-2")}>Card Type 2</li>
             <li>Card Type 3</li>
             <li>Card Type 4</li>
           </ul>
