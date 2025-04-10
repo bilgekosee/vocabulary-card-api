@@ -1,0 +1,83 @@
+body {
+  background-color: #26a6e0;
+  font-family: "Nunito", sans-serif;
+}
+
+.container-card-fourth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-fourth {
+  position: relative;
+  height: 250px;
+  width: 400px;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  background-color: #1b3a4b;
+  box-shadow: 0 0.8px 0.8px rgba(0, 0, 0, 0.02), 0 2px 2px rgba(0, 0, 0, 0.028),
+    0 3.8px 3.8px rgba(0, 0, 0, 0.035), 0 6.7px 6.7px rgba(0, 0, 0, 0.042),
+    0 12.5px 12.5px rgba(0, 0, 0, 0.05), 0 30px 30px rgba(0, 0, 0, 0.07);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.card-fourth h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-fourth-info {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: -6px;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  color: white;
+  font-weight: bold;
+  transition: opacity 300ms ease-in-out;
+}
+
+.card-fourth-info:hover {
+  opacity: 0;
+}
+
+.card-fourth-answer {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2em;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: #272640;
+  clip-path: circle(12% at 100% 0%);
+  transition: all 300ms ease-in-out;
+  z-index: 1;
+}
+
+.card-fourth-info:hover + .card-fourth-answer {
+  clip-path: circle(150% at 100% 0%);
+  background-color: #312244;
+}
+
+.card-fourth-answer p {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.card-fourth-answer p:first-of-type {
+  margin-top: 0;
+  padding: 0;
+  border-top: none;
+}
