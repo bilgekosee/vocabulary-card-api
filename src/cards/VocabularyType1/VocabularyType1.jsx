@@ -7,33 +7,53 @@ import {
 } from "react-icons/pi";
 
 const VocabularyCardOne = () => {
-  const [word, setWord] = useState([]);
-  return (
-    <div class="container" ontouchstart="this.classList.toggle('hover');">
-      <div class="card">
-        <div class="card_front">
-          <h1 class="card-symbol">&#128628;</h1>
-        </div>
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [flipped, setFlipped] = useState(false);
 
-        <div class="card_back">
-          <h1 class="card-symbol">&#128628;</h1>
-          <div class="card-text">
-            <p>
-              The word <strong>ampersand</strong> is a corruption of the phrase
-              "and per se & (and)", meaning "and intrinsically the word and
-              (represented by the symbol &)".
-            </p>
-            <p>
-              The ampersand can be traced back to the 1st century A.D. and the
-              Old Roman cursive, in which the letters E and T occasionally were
-              written together to form a ligature.
-            </p>
+  const currentWord = Vocabulary[currentIndex];
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex < Vocabulary.length - 1 ? prevIndex + 1 : 0
+    );
+    setFlipped(false);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : Vocabulary.length - 1
+    );
+    setFlipped(false);
+  };
+
+  return (
+    <div className="type-one-wrapper">
+      <div class="container" ontouchstart="this.classList.toggle('hover');">
+        <div
+          className={`card ${flipped ? "hover" : ""}`}
+          onClick={() => setFlipped(!flipped)}
+        >
+          <div class="card_front">
+            <h1 class="card-symbol">{currentWord.english}</h1>
+          </div>
+
+          <div class="card_back">
+            <h1 class="card-symbol">&#128628;</h1>
+            <div class="card-text">
+              <span>{currentWord.turkish}</span>
+            </div>
           </div>
         </div>
       </div>
       <div className="arrows-icon-wrapper">
-        <PiArrowFatLineLeftDuotone className="arrows-icon left" />
-        <PiArrowFatLineRightDuotone className="arrows-icon right" />
+        <PiArrowFatLineLeftDuotone
+          className="arrows-icon left"
+          onClick={handlePrev}
+        />
+        <PiArrowFatLineRightDuotone
+          className="arrows-icon right"
+          onClick={handleNext}
+        />
       </div>
     </div>
   );

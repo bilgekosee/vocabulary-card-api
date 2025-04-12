@@ -129,6 +129,7 @@ p:first-of-type {
 .arrows-icon-wrapper {
   display: flex;
   justify-content: space-around;
+  gap: 40px;
   padding: 10px;
 }
 .arrows-icon {
@@ -143,4 +144,10 @@ p:first-of-type {
 
 .arrows-icon.right:hover {
   transform: translateX(10px);
+}
+.type-one-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
