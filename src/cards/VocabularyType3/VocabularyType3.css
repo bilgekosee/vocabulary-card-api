@@ -1,6 +1,8 @@
 .third-card-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  padding: 10px;
   justify-content: center;
   font-family: "Bebas Neue", sans-serif;
   color: #f0ebd8;
@@ -111,4 +113,23 @@
 }
 .answer {
   font-size: 30px;
+}
+
+.card-third-icons-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  gap: 40px;
+}
+.card-third-icons {
+  font-size: 40px;
+  color: #748cab;
+  transition: all 0.3s ease;
+}
+.card-third-icons.left:hover {
+  transform: translateX(-10px);
+}
+.card-third-icons.right:hover {
+  transform: translateX(10px);
 }

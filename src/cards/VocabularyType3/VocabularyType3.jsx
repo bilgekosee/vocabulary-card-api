@@ -1,6 +1,10 @@
 import "./VocabularyType3.css";
 import { useState } from "react";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
+import {
+  BiSolidLeftArrowCircle,
+  BiSolidRightArrowCircle,
+} from "react-icons/bi";
 
 const VocabularyCardThird = () => {
   const [isApproved, setIsApproved] = useState(null);
@@ -40,6 +44,10 @@ const VocabularyCardThird = () => {
             )}
           </div>
         )}
+      </div>
+      <div className="card-third-icons-wrapper">
+        <BiSolidLeftArrowCircle className="card-third-icons left" />
+        <BiSolidRightArrowCircle className="card-third-icons right" />
       </div>
     </div>
   );
