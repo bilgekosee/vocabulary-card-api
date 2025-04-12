@@ -1,0 +1,1347 @@
+[
+  {
+    "id": 1,
+    "english": "qualified",
+    "turkish": "yeterli"
+  },
+  {
+    "id": 2,
+    "english": "attend",
+    "turkish": "Bir etkinliğe veya toplantıya katılmak"
+  },
+  {
+    "id": 3,
+    "english": "rehearsed",
+    "turkish": "prova yapıldı"
+  },
+  {
+    "id": 4,
+    "english": "remain",
+    "turkish": "kalmak"
+  },
+  {
+    "id": 5,
+    "english": "attitude",
+    "turkish": "tavır,tutum"
+  },
+  {
+    "id": 6,
+    "english": "fragrance",
+    "turkish": "hoş güzel koku"
+  },
+  {
+    "id": 7,
+    "english": "fragment",
+    "turkish": "bir bütünün parçası"
+  },
+  {
+    "id": 8,
+    "english": "solemnly",
+    "turkish": "ciddi ve ağırbaşlı şekilde"
+  },
+  {
+    "id": 9,
+    "english": "frankly",
+    "turkish": "açıkça dürüstçe"
+  },
+  {
+    "id": 10,
+    "english": "publicly",
+    "turkish": "kamuya açık"
+  },
+  {
+    "id": 11,
+    "english": "dig",
+    "turkish": "kazmak"
+  },
+  {
+    "id": 12,
+    "english": "shape",
+    "turkish": "şekil biçim"
+  },
+  {
+    "id": 13,
+    "english": "summarise",
+    "turkish": "özetlemek"
+  },
+  {
+    "id": 14,
+    "english": "nominate",
+    "turkish": "aday göstermek"
+  },
+  {
+    "id": 15,
+    "english": "represent",
+    "turkish": "temsil etmek"
+  },
+  {
+    "id": 16,
+    "english": "instance",
+    "turkish": "örnek ,vaka"
+  },
+  {
+    "id": 17,
+    "english": "pattern",
+    "turkish": "desen düzen"
+  },
+  {
+    "id": 18,
+    "english": "sample",
+    "turkish": "örnek numune"
+  },
+  {
+    "id": 19,
+    "english": "indication",
+    "turkish": "belirti veya işaret"
+  },
+  {
+    "id": 20,
+    "english": "trial",
+    "turkish": "deneme veya yargılama"
+  },
+  {
+    "id": 21,
+    "english": "purchase",
+    "turkish": "satın almak"
+  },
+  {
+    "id": 22,
+    "english": "boast",
+    "turkish": "övünmek"
+  },
+  {
+    "id": 23,
+    "english": "Courageous",
+    "turkish": "cesur korkusuz"
+  },
+  {
+    "id": 24,
+    "english": "Superstitious",
+    "turkish": "batıl inançlara sahip"
+  },
+  {
+    "id": 25,
+    "english": "Dissatisfaction",
+    "turkish": "memnuniyetsizlik"
+  },
+  {
+    "id": 26,
+    "english": "curiosity",
+    "turkish": "merak"
+  },
+  {
+    "id": 27,
+    "english": "Satisfaction",
+    "turkish": "memnuniyet"
+  },
+  {
+    "id": 28,
+    "english": "Confusion",
+    "turkish": "karışıklık"
+  },
+  {
+    "id": 29,
+    "english": "\"ridiculous\"",
+    "turkish": "saçma"
+  },
+  {
+    "id": 30,
+    "english": "\"comprehensive\"",
+    "turkish": "kapsamlı"
+  },
+  {
+    "id": 31,
+    "english": "\"evolve\"",
+    "turkish": "geliştirmek"
+  },
+  {
+    "id": 32,
+    "english": "determine",
+    "turkish": "belirlemek,saptamak"
+  },
+  {
+    "id": 33,
+    "english": "compare",
+    "turkish": "karşılaştırmak"
+  },
+  {
+    "id": 34,
+    "english": "participate",
+    "turkish": "katılmak,yer almak"
+  },
+  {
+    "id": 35,
+    "english": "discuss",
+    "turkish": "tartışmak"
+  },
+  {
+    "id": 36,
+    "english": "affect",
+    "turkish": "etkilemek"
+  },
+  {
+    "id": 37,
+    "english": "require",
+    "turkish": "gerektirmek"
+  },
+  {
+    "id": 38,
+    "english": "realize",
+    "turkish": "gerçekleştirmek"
+  },
+  {
+    "id": 39,
+    "english": "indicate",
+    "turkish": "belirtmek,işaret etmek"
+  },
+  {
+    "id": 40,
+    "english": "recommend",
+    "turkish": "önermek"
+  },
+  {
+    "id": 41,
+    "english": "delay",
+    "turkish": "gecikmek"
+  },
+  {
+    "id": 42,
+    "english": "contribute",
+    "turkish": "katkıda bulunmak"
+  },
+  {
+    "id": 43,
+    "english": "predict",
+    "turkish": "öngörmek"
+  },
+  {
+    "id": 44,
+    "english": "review",
+    "turkish": "gözden geçirmek"
+  },
+  {
+    "id": 45,
+    "english": "oppose",
+    "turkish": "karşı çıkmak"
+  },
+  {
+    "id": 46,
+    "english": "endure",
+    "turkish": "katlanmak,dayanmak"
+  },
+  {
+    "id": 47,
+    "english": "aim,target",
+    "turkish": "hedeflemek,amaçlamak"
+  },
+  {
+    "id": 48,
+    "english": "define",
+    "turkish": "tanımlamak"
+  },
+  {
+    "id": 49,
+    "english": "alleviate",
+    "turkish": "azaltmak,hafifletmek"
+  },
+  {
+    "id": 50,
+    "english": "emerge",
+    "turkish": "ortaya çıkmak ,belirmek"
+  },
+  {
+    "id": 51,
+    "english": "avoid",
+    "turkish": "kaçınmak,sakınmak"
+  },
+  {
+    "id": 52,
+    "english": "assume",
+    "turkish": "varsaymak,farzetmek"
+  },
+  {
+    "id": 53,
+    "english": "claim",
+    "turkish": "iddia etmek"
+  },
+  {
+    "id": 54,
+    "english": "prevent",
+    "turkish": "engel olmak"
+  },
+  {
+    "id": 55,
+    "english": "include",
+    "turkish": "kapsamak"
+  },
+  {
+    "id": 56,
+    "english": "transform,convert",
+    "turkish": "dönüştürmek"
+  },
+  {
+    "id": 57,
+    "english": "preserve",
+    "turkish": "korumak,muhafaza etmek"
+  },
+  {
+    "id": 58,
+    "english": "negotiate",
+    "turkish": "müzakere etmek,görüşmek"
+  },
+  {
+    "id": 59,
+    "english": "mow",
+    "turkish": "biçmek"
+  },
+  {
+    "id": 60,
+    "english": "tidy",
+    "turkish": "düzenli"
+  },
+  {
+    "id": 61,
+    "english": "Depreciation",
+    "turkish": "bir şeyin değerinin azalması (finansal)"
+  },
+  {
+    "id": 62,
+    "english": "Sacrifice",
+    "turkish": "FEDA ETMEK"
+  },
+  {
+    "id": 63,
+    "english": "regret",
+    "turkish": "mutsuzluk, pişman olmak"
+  },
+  {
+    "id": 64,
+    "english": "\"anticipate\"",
+    "turkish": "sezinlemek;önceden görmek"
+  },
+  {
+    "id": 65,
+    "english": "eventually",
+    "turkish": "sonunda;nihayet"
+  },
+  {
+    "id": 66,
+    "english": "mature",
+    "turkish": "olgun"
+  },
+  {
+    "id": 67,
+    "english": "council",
+    "turkish": "meclis kurul"
+  },
+  {
+    "id": 68,
+    "english": "borrow",
+    "turkish": "borç almak"
+  },
+  {
+    "id": 69,
+    "english": "recruit",
+    "turkish": "acemi,er ,işe yeni alınan çalışan"
+  },
+  {
+    "id": 70,
+    "english": "Alleviate",
+    "turkish": "hafifletmek, dindirmek, azaltmak"
+  },
+  {
+    "id": 71,
+    "english": "\"insist\"",
+    "turkish": "diretmek"
+  },
+  {
+    "id": 72,
+    "english": "occur",
+    "turkish": "meydana gelmek, olmak"
+  },
+  {
+    "id": 73,
+    "english": "peasant",
+    "turkish": "köylü"
+  },
+  {
+    "id": 74,
+    "english": "instantly",
+    "turkish": "derhal,hemen"
+  },
+  {
+    "id": 75,
+    "english": "Abandon",
+    "turkish": "terk etmek"
+  },
+  {
+    "id": 76,
+    "english": "Comprise",
+    "turkish": "İçermek, kapsamak"
+  },
+  {
+    "id": 77,
+    "english": "Deteriorate",
+    "turkish": "Kötüleşmek, bozulmak"
+  },
+  {
+    "id": 78,
+    "english": "Emphasize",
+    "turkish": "vurgulamak"
+  },
+  {
+    "id": 79,
+    "english": "Reluctant",
+    "turkish": "Gönülsüz, isteksiz"
+  },
+  {
+    "id": 80,
+    "english": "Vulnerable",
+    "turkish": "Savunmasız, hassas"
+  },
+  {
+    "id": 81,
+    "english": "Inevitable",
+    "turkish": "Kaçınılmaz"
+  },
+  {
+    "id": 82,
+    "english": "Substantial",
+    "turkish": "Büyük, önemli"
+  },
+  {
+    "id": 83,
+    "english": "Bring about",
+    "turkish": "Sebep olmak"
+  },
+  {
+    "id": 84,
+    "english": "Carry out",
+    "turkish": "Gerçekleştirmek, yürütmek"
+  },
+  {
+    "id": 85,
+    "english": "Take up",
+    "turkish": "Başlamak (hobi, spor)"
+  },
+  {
+    "id": 86,
+    "english": "Run out of",
+    "turkish": "Tükenmek, bitmek"
+  },
+  {
+    "id": 87,
+    "english": "Put off",
+    "turkish": "Ertelemek"
+  },
+  {
+    "id": 88,
+    "english": "insurance",
+    "turkish": "sigorta"
+  },
+  {
+    "id": 89,
+    "english": "retire",
+    "turkish": "çekilmek,gitmek"
+  },
+  {
+    "id": 90,
+    "english": "release",
+    "turkish": "serbest bırakmak"
+  },
+  {
+    "id": 91,
+    "english": "Assess",
+    "turkish": "Değerlendirmek"
+  },
+  {
+    "id": 92,
+    "english": "evaluate",
+    "turkish": "Değerlendirmek"
+  },
+  {
+    "id": 93,
+    "english": "Estimate",
+    "turkish": "tahmin etmek"
+  },
+  {
+    "id": 94,
+    "english": "reveal",
+    "turkish": "açığa çıkarmak"
+  },
+  {
+    "id": 95,
+    "english": "justify",
+    "turkish": "haklı çıkarmak, doğrulamak"
+  },
+  {
+    "id": 96,
+    "english": "enhance",
+    "turkish": "geliştirmek, artırmak"
+  },
+  {
+    "id": 97,
+    "english": "maintain",
+    "turkish": "sürdürmek"
+  },
+  {
+    "id": 98,
+    "english": "sustain",
+    "turkish": "devam ettirmek, sürdürmek"
+  },
+  {
+    "id": 99,
+    "english": "conduct",
+    "turkish": "yürütmek(deney araştırma gibi)"
+  },
+  {
+    "id": 100,
+    "english": "investment",
+    "turkish": "yatırım"
+  },
+  {
+    "id": 101,
+    "english": "revenue",
+    "turkish": "gelir"
+  },
+  {
+    "id": 102,
+    "english": "expenditure",
+    "turkish": "harcama"
+  },
+  {
+    "id": 103,
+    "english": "profit",
+    "turkish": "kar"
+  },
+  {
+    "id": 104,
+    "english": "deficit",
+    "turkish": "açık(bütçe açığı)"
+  },
+  {
+    "id": 105,
+    "english": "surplus",
+    "turkish": "fazlalık"
+  },
+  {
+    "id": 106,
+    "english": "inflation",
+    "turkish": "enflasyon"
+  },
+  {
+    "id": 107,
+    "english": "Recession",
+    "turkish": "ekonomik durgunluk"
+  },
+  {
+    "id": 108,
+    "english": "Entrepreneur",
+    "turkish": "girişimci"
+  },
+  {
+    "id": 109,
+    "english": "pollution",
+    "turkish": "kirlilik"
+  },
+  {
+    "id": 110,
+    "english": "navy",
+    "turkish": "deniz kuvvetleri donanma"
+  },
+  {
+    "id": 111,
+    "english": "up until then",
+    "turkish": "o zamana kadar"
+  },
+  {
+    "id": 112,
+    "english": "devastate",
+    "turkish": "harap etmek;mahvetmek"
+  },
+  {
+    "id": 113,
+    "english": "establish",
+    "turkish": "kurmak"
+  },
+  {
+    "id": 114,
+    "english": "initiative",
+    "turkish": "girişim"
+  },
+  {
+    "id": 115,
+    "english": "associate",
+    "turkish": "birleştirmek"
+  },
+  {
+    "id": 116,
+    "english": "conquer",
+    "turkish": "fethetmek,yenmek"
+  },
+  {
+    "id": 117,
+    "english": "evidence",
+    "turkish": "kanıt,delil"
+  },
+  {
+    "id": 118,
+    "english": "maraud",
+    "turkish": "yağmalama"
+  },
+  {
+    "id": 119,
+    "english": "distinc",
+    "turkish": "farklı"
+  },
+  {
+    "id": 120,
+    "english": "possession",
+    "turkish": "iyelik;sahiplik;sahip olma"
+  },
+  {
+    "id": 121,
+    "english": "conquer",
+    "turkish": "\"fethetmek\""
+  },
+  {
+    "id": 122,
+    "english": "belief",
+    "turkish": "inanç;iman"
+  },
+  {
+    "id": 123,
+    "english": "establish",
+    "turkish": "kurmak"
+  },
+  {
+    "id": 124,
+    "english": "subdivision",
+    "turkish": "alt bölüm"
+  },
+  {
+    "id": 125,
+    "english": "sect",
+    "turkish": "tarikat"
+  },
+  {
+    "id": 126,
+    "english": "Untouched",
+    "turkish": "Dokunulmamış, el değmemiş"
+  },
+  {
+    "id": 127,
+    "english": "intact",
+    "turkish": "sağlam"
+  },
+  {
+    "id": 128,
+    "english": "aspect",
+    "turkish": "Görünüş, Yön, Taraf"
+  },
+  {
+    "id": 129,
+    "english": "transcend",
+    "turkish": "aşmak, ötesine geçmek, üstün olmak"
+  },
+  {
+    "id": 130,
+    "english": "distinction",
+    "turkish": "fark,ayrım"
+  },
+  {
+    "id": 131,
+    "english": "tenfold",
+    "turkish": "on kat, on misli"
+  },
+  {
+    "id": 132,
+    "english": "citizen",
+    "turkish": "vatandaş;yurttaş"
+  },
+  {
+    "id": 133,
+    "english": "custom",
+    "turkish": "örf,adet"
+  },
+  {
+    "id": 134,
+    "english": "dynasty",
+    "turkish": "hanedan"
+  },
+  {
+    "id": 135,
+    "english": "to imitate",
+    "turkish": "taklit etmek"
+  },
+  {
+    "id": 136,
+    "english": "\"abolish\"",
+    "turkish": "\"(ortadan) kaldırmak,sona erdirmek\""
+  },
+  {
+    "id": 137,
+    "english": "backward",
+    "turkish": "geri;geriye,countryaz gelişmiş"
+  },
+  {
+    "id": 138,
+    "english": "bony",
+    "turkish": "kemikli, kılçıklı"
+  },
+  {
+    "id": 139,
+    "english": "arch",
+    "turkish": "kemer,ayak kemeri"
+  },
+  {
+    "id": 140,
+    "english": "agony",
+    "turkish": "azap,eziyet"
+  },
+  {
+    "id": 141,
+    "english": "consciousness",
+    "turkish": "bilinç,şuur"
+  },
+  {
+    "id": 142,
+    "english": "to suffer",
+    "turkish": "acı çekmek"
+  },
+  {
+    "id": 143,
+    "english": "adverse",
+    "turkish": "\"zıt;karşı;ters;aksi\""
+  },
+  {
+    "id": 144,
+    "english": "futile",
+    "turkish": "etkisiz, sonuçsuz"
+  },
+  {
+    "id": 145,
+    "english": "variety",
+    "turkish": "çeşitlilik"
+  },
+  {
+    "id": 146,
+    "english": "majority",
+    "turkish": "çoğunluk"
+  },
+  {
+    "id": 147,
+    "english": "despite",
+    "turkish": "-e rağmen;karşın"
+  },
+  {
+    "id": 148,
+    "english": "In order to",
+    "turkish": "amacıyla"
+  },
+  {
+    "id": 149,
+    "english": "because of",
+    "turkish": "-den dolayı,yüzünden"
+  },
+  {
+    "id": 150,
+    "english": "Likewise",
+    "turkish": "aynı şekilde"
+  },
+  {
+    "id": 151,
+    "english": "Given that",
+    "turkish": "-dığı için"
+  },
+  {
+    "id": 152,
+    "english": "So that",
+    "turkish": "-sın diye"
+  },
+  {
+    "id": 153,
+    "english": "Would rather",
+    "turkish": "-meyi yeğlerim, tercih etmek"
+  },
+  {
+    "id": 154,
+    "english": "cope with",
+    "turkish": "başa çıkmak"
+  },
+  {
+    "id": 155,
+    "english": "tackle",
+    "turkish": "uğraşmak"
+  },
+  {
+    "id": 156,
+    "english": "surrender",
+    "turkish": "teslim olmak"
+  },
+  {
+    "id": 157,
+    "english": "adverse",
+    "turkish": "olumsuz,istenmeyen"
+  },
+  {
+    "id": 158,
+    "english": "detrimental",
+    "turkish": "zararlı"
+  },
+  {
+    "id": 159,
+    "english": "severe",
+    "turkish": "şiddetli,ciddi,katı"
+  },
+  {
+    "id": 160,
+    "english": "resilient",
+    "turkish": "esnek"
+  },
+  {
+    "id": 161,
+    "english": "utterly",
+    "turkish": "tamamen"
+  },
+  {
+    "id": 162,
+    "english": "partially",
+    "turkish": "kısmen"
+  },
+  {
+    "id": 163,
+    "english": "deficiency",
+    "turkish": "yetersizlik,eksiklik"
+  },
+  {
+    "id": 164,
+    "english": "increase",
+    "turkish": "geliştirmek,arttırmak"
+  },
+  {
+    "id": 165,
+    "english": "boost",
+    "turkish": "desteklemek"
+  },
+  {
+    "id": 166,
+    "english": "simply",
+    "turkish": "tek kelimeyle"
+  },
+  {
+    "id": 167,
+    "english": "astonishing",
+    "turkish": "şaşırtıcı,hayret verici"
+  },
+  {
+    "id": 168,
+    "english": "fade",
+    "turkish": "yok olmak,gözden kaybolmak"
+  },
+  {
+    "id": 169,
+    "english": "on the one hand",
+    "turkish": "bir taraftan"
+  },
+  {
+    "id": 170,
+    "english": "significantly",
+    "turkish": "önemli ölçüde"
+  },
+  {
+    "id": 171,
+    "english": "disorder",
+    "turkish": "bozukluk hastalık"
+  },
+  {
+    "id": 172,
+    "english": "struggle",
+    "turkish": "mücadele etmek çabalamak"
+  },
+  {
+    "id": 173,
+    "english": "sleep deprivation",
+    "turkish": "uyku eksikliği"
+  },
+  {
+    "id": 174,
+    "english": "efficiency",
+    "turkish": "verim"
+  },
+  {
+    "id": 175,
+    "english": "just as",
+    "turkish": "tıpkı ... gibi"
+  },
+  {
+    "id": 176,
+    "english": "enhance",
+    "turkish": "arttırmak"
+  },
+  {
+    "id": 177,
+    "english": "augment",
+    "turkish": "arttırmak,çoğaltmak"
+  },
+  {
+    "id": 178,
+    "english": "engender",
+    "turkish": "neden olmak"
+  },
+  {
+    "id": 179,
+    "english": "compete",
+    "turkish": "yarışmak"
+  },
+  {
+    "id": 180,
+    "english": "show off",
+    "turkish": "hava atmak"
+  },
+  {
+    "id": 181,
+    "english": "inventive",
+    "turkish": "yaratıcı,özgün"
+  },
+  {
+    "id": 182,
+    "english": "express",
+    "turkish": "ifade etmek,dile getirmek"
+  },
+  {
+    "id": 183,
+    "english": "association",
+    "turkish": "ilişki,bağlantı"
+  },
+  {
+    "id": 184,
+    "english": "ascend",
+    "turkish": "yükselmek,artmak"
+  },
+  {
+    "id": 185,
+    "english": "core",
+    "turkish": "öz,çekirdek"
+  },
+  {
+    "id": 186,
+    "english": "fundamental",
+    "turkish": "temel,esas"
+  },
+  {
+    "id": 187,
+    "english": "go by",
+    "turkish": "geçip gitmek"
+  },
+  {
+    "id": 188,
+    "english": "passage",
+    "turkish": "akış"
+  },
+  {
+    "id": 189,
+    "english": "representation",
+    "turkish": "temsil etme/edilme"
+  },
+  {
+    "id": 190,
+    "english": "consistent",
+    "turkish": "tutarlı,istikrarlı"
+  },
+  {
+    "id": 191,
+    "english": "changing",
+    "turkish": "şans eseri,riske girmek"
+  },
+  {
+    "id": 192,
+    "english": "declare",
+    "turkish": "açıklamak"
+  },
+  {
+    "id": 193,
+    "english": "refrain",
+    "turkish": "sakınmak,kaçınmak"
+  },
+  {
+    "id": 194,
+    "english": "impose",
+    "turkish": "uygulamak,zorla yaptırmak"
+  },
+  {
+    "id": 195,
+    "english": "temporary",
+    "turkish": "geçici kısa"
+  },
+  {
+    "id": 196,
+    "english": "measure",
+    "turkish": "önlem tedbir"
+  },
+  {
+    "id": 197,
+    "english": "overcome",
+    "turkish": "üstesinden gelmek,başa çıkmak"
+  },
+  {
+    "id": 198,
+    "english": "turn up",
+    "turkish": "varmak,çıkagelmek"
+  },
+  {
+    "id": 199,
+    "english": "face",
+    "turkish": "yüzleşmek,tecrübe etmek"
+  },
+  {
+    "id": 200,
+    "english": "drought",
+    "turkish": "kuraklık, kıtlık"
+  },
+  {
+    "id": 201,
+    "english": "dramatically",
+    "turkish": "önemli öçüde,çarpıcı biçimde"
+  },
+  {
+    "id": 202,
+    "english": "accuse",
+    "turkish": "suçlamak"
+  },
+  {
+    "id": 203,
+    "english": "mismanage",
+    "turkish": "kötü yönetmek"
+  },
+  {
+    "id": 204,
+    "english": "domestic",
+    "turkish": "iç,yerli"
+  },
+  {
+    "id": 205,
+    "english": "Adopt",
+    "turkish": "benimsemek"
+  },
+  {
+    "id": 206,
+    "english": "deal with",
+    "turkish": "başa çıkmak,uğraşmak"
+  },
+  {
+    "id": 207,
+    "english": "generate",
+    "turkish": "üretmek"
+  },
+  {
+    "id": 208,
+    "english": "consider",
+    "turkish": "düşünmek"
+  },
+  {
+    "id": 209,
+    "english": "aggravate",
+    "turkish": "ağırlaştırmak,kötüleştirmek"
+  },
+  {
+    "id": 210,
+    "english": "blame",
+    "turkish": "suçlamak"
+  },
+  {
+    "id": 211,
+    "english": "shortage",
+    "turkish": "eksiklik yokluk"
+  },
+  {
+    "id": 212,
+    "english": "tough",
+    "turkish": "sert, katı"
+  },
+  {
+    "id": 213,
+    "english": "hit",
+    "turkish": "etkilemek, çarpmak"
+  },
+  {
+    "id": 214,
+    "english": "As well as",
+    "turkish": "-e ek olarak"
+  },
+  {
+    "id": 215,
+    "english": "Cut down on",
+    "turkish": "azaltmak, kısmak, daha az tüketmek / kullanmak"
+  },
+  {
+    "id": 216,
+    "english": "Come up with",
+    "turkish": "(bir fikir, çözüm, plan) bulmak,"
+  },
+  {
+    "id": 217,
+    "english": "Considerably",
+    "turkish": "önemli ölçüde"
+  },
+  {
+    "id": 218,
+    "english": "Slightly",
+    "turkish": "hafifçe,biraz"
+  },
+  {
+    "id": 219,
+    "english": "Moreover",
+    "turkish": "üstelik"
+  },
+  {
+    "id": 220,
+    "english": "abate",
+    "turkish": "azalmak,dinmek,hafiflemek"
+  },
+  {
+    "id": 221,
+    "english": "Adequacy",
+    "turkish": "yeterlilik,elverişlilik"
+  },
+  {
+    "id": 222,
+    "english": "depend on",
+    "turkish": "bağlı olmak"
+  },
+  {
+    "id": 223,
+    "english": "gradually",
+    "turkish": "gitgide,yavaş yavaş"
+  },
+  {
+    "id": 224,
+    "english": "average",
+    "turkish": "ortalama"
+  },
+  {
+    "id": 225,
+    "english": "rise",
+    "turkish": "artmak,yükselmek"
+  },
+  {
+    "id": 226,
+    "english": "moreover",
+    "turkish": "ayrıca,dahası"
+  },
+  {
+    "id": 227,
+    "english": "lead to",
+    "turkish": "sebep olmak,yol açmak"
+  },
+  {
+    "id": 228,
+    "english": "shift",
+    "turkish": "değişiklik"
+  },
+  {
+    "id": 229,
+    "english": "alteration",
+    "turkish": "değişiklik"
+  },
+  {
+    "id": 230,
+    "english": "accompany",
+    "turkish": "eşlik etmek,ardından gelmek"
+  },
+  {
+    "id": 231,
+    "english": "numerous",
+    "turkish": "sayısız,fazla"
+  },
+  {
+    "id": 232,
+    "english": "rainfall",
+    "turkish": "yağmur"
+  },
+  {
+    "id": 233,
+    "english": "glacier",
+    "turkish": "bluz"
+  },
+  {
+    "id": 234,
+    "english": "undergo",
+    "turkish": "maruz kalmak,yaşamak,tecrübe etmek"
+  },
+  {
+    "id": 235,
+    "english": "dramatic",
+    "turkish": "önemli,göze çarpan"
+  },
+  {
+    "id": 236,
+    "english": "melt",
+    "turkish": "erimek"
+  },
+  {
+    "id": 237,
+    "english": "varying",
+    "turkish": "değişken,farklı"
+  },
+  {
+    "id": 238,
+    "english": "result from",
+    "turkish": "-den kaynaklanmak, ortaya çıkmak"
+  },
+  {
+    "id": 239,
+    "english": "orbit",
+    "turkish": "yörünge"
+  },
+  {
+    "id": 240,
+    "english": "eruption",
+    "turkish": "patlama,infilak"
+  },
+  {
+    "id": 241,
+    "english": "rely on",
+    "turkish": "güvenmek, bağlı olmak"
+  },
+  {
+    "id": 242,
+    "english": "embark on",
+    "turkish": "(yeni veya önemli bir işe) başlamak"
+  },
+  {
+    "id": 243,
+    "english": "finite",
+    "turkish": "sınırlı,sonlu"
+  },
+  {
+    "id": 244,
+    "english": "abundant",
+    "turkish": "bol,bereketli"
+  },
+  {
+    "id": 245,
+    "english": "provide",
+    "turkish": "sağlamak,temin etmek"
+  },
+  {
+    "id": 246,
+    "english": "vast",
+    "turkish": "fazla,çok geniş"
+  },
+  {
+    "id": 247,
+    "english": "hospitable",
+    "turkish": "yaşamaya elverişli"
+  },
+  {
+    "id": 248,
+    "english": "condition",
+    "turkish": "şart koşul durum"
+  },
+  {
+    "id": 249,
+    "english": "offer",
+    "turkish": "sunmak,sağlamak"
+  },
+  {
+    "id": 250,
+    "english": "sound",
+    "turkish": "gibi gelmek,etki bırakmak"
+  },
+  {
+    "id": 251,
+    "english": "odd",
+    "turkish": "garip,tuhaf,ilginç"
+  },
+  {
+    "id": 252,
+    "english": "cover",
+    "turkish": "kaplamak,içermek"
+  },
+  {
+    "id": 253,
+    "english": "by far",
+    "turkish": "çok , açık ara , fazlasıyla"
+  },
+  {
+    "id": 254,
+    "english": "vital",
+    "turkish": "hayati,önemli,esas"
+  },
+  {
+    "id": 255,
+    "english": "exist",
+    "turkish": "var olmak"
+  },
+  {
+    "id": 256,
+    "english": "compose of",
+    "turkish": "-den oluşmak"
+  },
+  {
+    "id": 257,
+    "english": "building block",
+    "turkish": "temel yapı taşı"
+  },
+  {
+    "id": 258,
+    "english": "heavily",
+    "turkish": "aşırı derecede"
+  },
+  {
+    "id": 259,
+    "english": "exploit",
+    "turkish": "kullanmak,faydalanmak"
+  },
+  {
+    "id": 260,
+    "english": "wisely",
+    "turkish": "akıllı bir şekilde"
+  },
+  {
+    "id": 261,
+    "english": "thus",
+    "turkish": "böylece bu yüzden"
+  },
+  {
+    "id": 262,
+    "english": "indeed",
+    "turkish": "gerçekten"
+  },
+  {
+    "id": 263,
+    "english": "despite",
+    "turkish": "-e rağmen"
+  },
+  {
+    "id": 264,
+    "english": "immense",
+    "turkish": "muazzam,kocaman,çok büyük"
+  },
+  {
+    "id": 265,
+    "english": "restricted",
+    "turkish": "kısıtlı, sınırlı"
+  },
+  {
+    "id": 266,
+    "english": "barely",
+    "turkish": "zar zor, nerdeyse hiç"
+  },
+  {
+    "id": 267,
+    "english": "commonly",
+    "turkish": "genellikle çoğu zaman"
+  },
+  {
+    "id": 268,
+    "english": "consist of",
+    "turkish": "-den oluşmak"
+  },
+  {
+    "id": 269,
+    "english": "remind of",
+    "turkish": "bir şeyi/birini hatırlatmak"
+  }
+]
