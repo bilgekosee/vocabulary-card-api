@@ -41,9 +41,9 @@ const Header = () => {
             <span className="card-title">CARDS</span>
           </div>
           {open ? (
-            <IoIosArrowDown className="cards-icon" />
+            <IoIosArrowDown className="cards-icon-arrow" />
           ) : (
-            <IoIosArrowUp className="cards-icon" />
+            <IoIosArrowUp className="cards-icon-arrow" />
           )}
         </div>
 
@@ -63,9 +63,9 @@ const Header = () => {
             <span className="card-title">READING</span>
           </div>
           {readinOpen ? (
-            <IoIosArrowDown className="cards-icon" />
+            <IoIosArrowDown className="cards-icon-arrow" />
           ) : (
-            <IoIosArrowUp className="cards-icon" />
+            <IoIosArrowUp className="cards-icon-arrow" />
           )}
         </div>
 

@@ -35,6 +35,11 @@
   font-weight: 600;
   font-size: 18px;
 }
+.sidebar-card.close .card-title,
+.sidebar-card.close .submenu,
+.sidebar-card.close .cards-icon-arrow {
+  display: none;
+}
 .tab {
   display: flex;
   flex-direction: column;
@@ -105,6 +110,10 @@ li {
 }
 
 .cards-icon {
+  font-size: 30px;
+  color: #1f2937;
+}
+.cards-icon-arrow {
   font-size: 30px;
   color: #1f2937;
 }
