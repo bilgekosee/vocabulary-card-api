@@ -1,5 +1,9 @@
 import "./VocabularyType4.css";
 import { MdTranslate } from "react-icons/md";
+import {
+  PiArrowCircleRightDuotone,
+  PiArrowCircleLeftDuotone,
+} from "react-icons/pi";
 
 const VocabularyCardFourth = () => {
   return (
@@ -15,6 +19,10 @@ const VocabularyCardFourth = () => {
             teselli
           </p>
         </div>
+      </div>
+      <div className="card-fourth-arrowsicon-wrapper">
+        <PiArrowCircleLeftDuotone className="card-fourth-arrowsicon left" />
+        <PiArrowCircleRightDuotone className="card-fourth-arrowsicon right" />
       </div>
     </div>
   );

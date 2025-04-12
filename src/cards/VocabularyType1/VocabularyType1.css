@@ -72,7 +72,6 @@ body {
 }
 
 .card_back {
-  /*   display: none; */
   padding: 1em;
 }
 
@@ -93,7 +92,6 @@ p:first-of-type {
   border-top: 8px solid #333;
 }
 
-/* FLIP CARD STYLING */
 .container {
   perspective: 1000px;
 }
@@ -124,4 +122,25 @@ p:first-of-type {
 
 .card_back {
   transform: rotateY(-180deg);
+}
+.word-english {
+  font-size: 15px;
+}
+.arrows-icon-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.arrows-icon {
+  font-size: 40px;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.arrows-icon.left:hover {
+  transform: translateX(-10px);
+}
+
+.arrows-icon.right:hover {
+  transform: translateX(10px);
 }

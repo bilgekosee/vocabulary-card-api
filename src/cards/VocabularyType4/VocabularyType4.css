@@ -5,6 +5,7 @@ body {
 
 .container-card-fourth {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -80,4 +81,20 @@ body {
   margin-top: 0;
   padding: 0;
   border-top: none;
+}
+.card-fourth-arrowsicon-wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+}
+.card-fourth-arrowsicon {
+  font-size: 40px;
+  color: #4d194d;
+  transition: all 0.3s ease;
+}
+.card-fourth-arrowsicon.left:hover {
+  transform: translateX(-10px);
+}
+.card-fourth-arrowsicon.right:hover {
+  transform: translateX(10px);
 }

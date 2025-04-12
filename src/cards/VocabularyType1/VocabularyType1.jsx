@@ -1,6 +1,13 @@
 import "./VocabularyType1.css";
+import Vocabulary from "../../data/vocabulary_complete.json";
+import { useState } from "react";
+import {
+  PiArrowFatLineLeftDuotone,
+  PiArrowFatLineRightDuotone,
+} from "react-icons/pi";
 
 const VocabularyCardOne = () => {
+  const [word, setWord] = useState([]);
   return (
     <div class="container" ontouchstart="this.classList.toggle('hover');">
       <div class="card">
@@ -23,6 +30,10 @@ const VocabularyCardOne = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="arrows-icon-wrapper">
+        <PiArrowFatLineLeftDuotone className="arrows-icon left" />
+        <PiArrowFatLineRightDuotone className="arrows-icon right" />
       </div>
     </div>
   );
