@@ -34,7 +34,11 @@ const VocabularyCardOne = () => {
           onClick={() => setFlipped(!flipped)}
         >
           <div class="card_front">
-            <h1 class="card-symbol">{currentWord.english}</h1>
+            <h1 class="card-symbol">
+              <div className="english-card-wrapper">
+                <span>{currentWord.english}</span>
+              </div>
+            </h1>
           </div>
 
           <div class="card_back">
