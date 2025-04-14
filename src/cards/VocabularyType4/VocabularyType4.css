@@ -76,6 +76,10 @@ body {
   color: white;
   font-size: 1.25rem;
   font-weight: 500;
+  max-width: 300px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 .card-fourth-answer p:first-of-type {
   margin-top: 0;

@@ -113,6 +113,11 @@
 }
 .answer {
   font-size: 30px;
+  max-width: 275px;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .card-third-icons-wrapper {
