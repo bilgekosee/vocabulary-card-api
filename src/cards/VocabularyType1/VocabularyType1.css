@@ -166,3 +166,17 @@ p:first-of-type {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0);
 }
+.turkish-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 364px;
+  height: 610px;
+  background-color: rgba(255, 255, 255, 0.589);
+}
+.turkish-card-wrapper span {
+  font-size: 32px;
+  max-width: 200px;
+  text-align: center;
+  color: #000;
+}

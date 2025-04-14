@@ -42,10 +42,11 @@ const VocabularyCardOne = () => {
           </div>
 
           <div class="card_back">
-            <h1 class="card-symbol">&#128628;</h1>
-            <div class="card-text">
-              <span>{currentWord.turkish}</span>
-            </div>
+            <h1 class="card-symbol">
+              <div class="turkish-card-wrapper">
+                <span>{currentWord.turkish}</span>
+              </div>
+            </h1>
           </div>
         </div>
       </div>
