@@ -18,12 +18,14 @@ const VocabularyCardThird = () => {
       prevIndex < Vocabulary.length - 1 ? prevIndex + 1 : 0
     );
     setFlippedCard(false);
+    setIsApproved(null);
   };
   const prevCard = () => {
     setIndex((prevIndex) =>
       prevIndex > 0 ? prevIndex - 1 : Vocabulary.length - 1
     );
     setFlippedCard(false);
+    setIsApproved(null);
   };
 
   return (
