@@ -180,3 +180,22 @@ p:first-of-type {
   text-align: center;
   color: #000;
 }
+
+@media (max-width: 640px) {
+  .container,
+  .card,
+  .card_front,
+  .card_back {
+    width: 300px;
+    height: 400px;
+    margin: 5px 0;
+  }
+  .turkish-card-wrapper {
+    width: 268px;
+    height: 370px;
+  }
+  .english-card-wrapper {
+    width: 270px;
+    height: 270px;
+  }
+}

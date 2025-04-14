@@ -138,3 +138,24 @@
 .card-third-icons.right:hover {
   transform: translateX(10px);
 }
+
+@media (max-width: 880px) {
+  .third-card-wrapper {
+    width: 300px;
+    height: 450px;
+  }
+  .third-card-title-wrapper {
+    width: 300px;
+    height: 150px;
+  }
+  .false-section {
+    gap: 10px;
+  }
+  .answer {
+    font-size: 18px;
+    max-width: 220px;
+  }
+  .third-card-title {
+    font-size: 30px;
+  }
+}

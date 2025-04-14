@@ -102,3 +102,19 @@ body {
 .card-fourth-arrowsicon.right:hover {
   transform: translateX(10px);
 }
+@media (max-width: 700px) {
+  .card-fourth {
+    height: 350px;
+    width: 280px;
+  }
+  .card-fourth-answer p {
+    max-width: 220px;
+  }
+  .card-fourth h1 {
+    max-width: 240px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+}
