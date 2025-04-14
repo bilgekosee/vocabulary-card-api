@@ -1,144 +1,68 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import "./VocabularyType2.css";
+import Vocabulary from "../../data/vocabulary_complete.json";
 
 const VocabularyCardSecond = () => {
-  let activeCard = null;
-  let activeCardStatus = null;
-  let isAnimating = false;
-  let cardToAnimate = null;
-  let activeCardRect = null;
-  let touchStartRect = {};
+  const [activeIndex, setActiveIndex] = useState(Vocabulary.length - 1);
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [transform, setTransform] = useState("none");
+  const [opacity, setOpacity] = useState(1);
 
-  const readCards = [];
-  const remainingCards = [];
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setDragStart({ x: e.clientX, y: e.clientY });
+  };
 
-  useEffect(() => {
-    const flashCards = [...document.querySelectorAll(".flash-card")];
-    const flashOutroCard = document.querySelector(".flash-done");
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
 
-    remainingCards.push(...flashCards);
+    const dx = e.clientX - dragStart.x;
+    const dy = e.clientY - dragStart.y;
 
-    flashCards.forEach((card) => {
-      card.addEventListener(
-        "mousedown",
-        (e) => {
-          cardToAnimate = e.target.closest(".flash-card");
+    setTransform(`translate(${dx}px, ${dy}px)`);
 
-          if (cardToAnimate.classList.contains("active")) {
-            activeCard = cardToAnimate;
-            activeCardStatus = activeCard.querySelector(".flash-card-status");
-            cardToAnimate.style.transition = "none";
-            activeCardRect = activeCard.getBoundingClientRect();
-            touchStartRect = { x: e.clientX, y: e.clientY };
-          }
-        },
-        true
-      );
-
-      card.addEventListener("mousemove", (e) => {
-        if (cardToAnimate) {
-          isAnimating = true;
-          requestAnimationFrame(() => {
-            AnimateActiveCard(e);
-          });
-        }
-      });
-
-      card.addEventListener("mouseup", (event) => {
-        const cardToFlip = event.target.closest(".flash-card");
-        if (isAnimating) {
-          stopAnimation(event);
-        } else {
-          isAnimating = false;
-          cardToAnimate = null;
-          flipCard(cardToFlip);
-        }
-      });
-    });
-
-    function AnimateActiveCard(e) {
-      const x = e.clientX - touchStartRect.x;
-      const y = e.clientY - touchStartRect.y;
-
-      activeCard.style.transform = `translate3d(${x}px, ${y}px, 0px)`;
-
-      const right = x > 1;
-      const cardOpacity = Math.min(
-        Math.abs(x / (activeCardRect.width / 2)) * 1,
-        1
-      );
-
-      if (right) {
-        activeCardStatus.style.background = "green";
-        activeCardStatus.style.opacity = `${cardOpacity}`;
-        activeCardStatus.textContent = "Got it";
-      } else {
-        activeCardStatus.style.background = "orange";
-        activeCardStatus.style.opacity = `${cardOpacity}`;
-        activeCardStatus.textContent = "Study again";
-      }
+    const el = document.querySelector(".flash-card-status");
+    if (el) {
+      el.textContent = dx > 0 ? "Got it" : "Study again";
+      el.style.background = dx > 0 ? "green" : "orange";
+      el.style.opacity = Math.min(Math.abs(dx / 150), 1);
     }
+  };
 
-    function stopAnimation(e) {
-      const lastX = e.clientX - touchStartRect.x;
-      const endY = e.clientY - touchStartRect.y;
-      activeCard.style.transition = "transform .8s ease-in";
-      activeCardStatus.style.opacity = "0";
+  const handleMouseUp = (e) => {
+    if (!isDragging) return;
+    const dx = e.clientX - dragStart.x;
+    if (Math.abs(dx) > 150) {
+      setTransform(`translateX(${dx > 0 ? "150%" : "-150%"})`);
+      setOpacity(0);
 
-      if (Math.abs(lastX) > activeCardRect.width / 2) {
-        const right = lastX > 0;
-
-        if (right) {
-          activeCard.style.transform = `translate3d(100vw, ${endY}px, 0px)`;
-        } else {
-          activeCard.style.transform = `translate3d(-100vw, ${endY}px, 0px)`;
+      setTimeout(() => {
+        const flippedEl = document.querySelector(".flash-card--inner");
+        if (flippedEl?.classList.contains("flip")) {
+          flippedEl.classList.remove("flip");
         }
 
-        readCards.push(activeCard);
-        remainingCards.pop();
-        setNextActiveCard();
-      } else {
-        activeCard.style.transform = "none";
-      }
+        const statusEl = document.querySelector(".flash-card-status");
+        if (statusEl) {
+          statusEl.textContent = "Study again";
+          statusEl.style.opacity = "0";
+        }
 
-      cardToAnimate = null;
-      activeCardStatus = null;
-      isAnimating = false;
-      touchStartRect = null;
+        setIsFlipped(false);
+        setActiveIndex((prev) => prev - 1);
+        setTransform("none");
+        setOpacity(1);
+      }, 400);
     }
 
-    function setNextActiveCard() {
-      if (remainingCards.length > 0) {
-        activeCard = remainingCards[remainingCards.length - 1];
-        activeCard.classList.add("active");
-        activeCard.style.transform = "none";
-      } else {
-        flashOutroCard.classList.add("show");
-      }
-    }
-
-    function flipCard(card) {
-      if (!card.classList.contains("active")) return;
-      const innerCard = card.querySelector(".flash-card--inner");
-      innerCard.classList.toggle("flip");
-    }
-  }, []);
+    setIsDragging(false);
+  };
 
   const handleUndo = () => {
-    if (readCards.length > 0 && remainingCards.length > 0) {
-      const nextCard = readCards.pop();
-      const lastActive = activeCard;
-
-      remainingCards.push(nextCard);
-
-      activeCard.classList.remove("active");
-      activeCard = nextCard;
-
-      activeCard.style.transition = "transform .3s ease-in";
-      activeCard.style.transform = "none";
-      lastActive.style.transform = "rotate(5deg)";
-
-      nextCard.classList.add("active");
+    if (activeIndex < Vocabulary.length - 1) {
+      setActiveIndex((prev) => prev + 1);
     }
   };
 
@@ -148,22 +72,31 @@ const VocabularyCardSecond = () => {
         <div className="flash-done">
           <h1>You are doing well!!!</h1>
         </div>
-        {[1, 2, 3, 4].map((_, i) => (
-          <div className={`flash-card ${i === 3 ? "active" : ""}`} key={i}>
+
+        {activeIndex >= 0 && (
+          <div
+            className="flash-card active"
+            style={{ transform, opacity }}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onClick={() => setIsFlipped((prev) => !prev)}
+          >
             <div className="flash-card-status">Study again</div>
-            <div className="flash-card--inner">
+            <div className={`flash-card--inner ${isFlipped ? "flip" : ""}`}>
               <div className="flash-card--front">
-                <h1>Front</h1>
+                <h1>{Vocabulary[activeIndex].english}</h1>
               </div>
               <div className="flash-card--back">
-                <h1>Back</h1>
+                <h1>{Vocabulary[activeIndex].turkish}</h1>
               </div>
             </div>
           </div>
-        ))}
+        )}
       </div>
+
       <button className="undo-swipe" onClick={handleUndo}>
-        undo
+        Undo
       </button>
     </div>
   );
