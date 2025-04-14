@@ -114,13 +114,18 @@ button.undo-swipe {
   color: white;
   transform: rotateY(180deg);
 }
-
-.flash-card:nth-child(odd) {
-  transform: rotate(5deg);
+.flash-card--back h1 {
+  max-width: 300px;
+  font-size: 32px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
-
-.flash-card:nth-child(even) {
-  transform: rotate(-5deg);
+.flash-card--front h1 {
+  max-width: 300px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .flash-card.active {

@@ -69,30 +69,50 @@ const VocabularyCardSecond = () => {
   return (
     <div className="typetwo-card-container">
       <div className="flash-cards">
-        <div className="flash-done">
-          <h1>You are doing well!!!</h1>
-        </div>
+        {Vocabulary.slice(Math.max(activeIndex - 3, 0), activeIndex + 1)
+          .map((card, i, arr) => {
+            const isTop = i === arr.length - 1;
+            const cardIndex = activeIndex - (arr.length - 1 - i);
+            const offset = arr.length - 1 - i;
+            const rotation = offset === 0 ? 0 : offset % 2 === 0 ? -5 : 5;
 
-        {activeIndex >= 0 && (
-          <div
-            className="flash-card active"
-            style={{ transform, opacity }}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onClick={() => setIsFlipped((prev) => !prev)}
-          >
-            <div className="flash-card-status">Study again</div>
-            <div className={`flash-card--inner ${isFlipped ? "flip" : ""}`}>
-              <div className="flash-card--front">
-                <h1>{Vocabulary[activeIndex].english}</h1>
+            return (
+              <div
+                key={card.id}
+                className={`flash-card ${isTop ? "active" : ""}`}
+                style={{
+                  transform: isTop
+                    ? transform
+                    : `translateY(${
+                        offset * 10
+                      }px) rotate(${rotation}deg) scale(${1 - offset * 0.05})`,
+                  opacity: isTop ? opacity : 1,
+                  zIndex: i,
+                }}
+                onMouseDown={isTop ? handleMouseDown : undefined}
+                onMouseMove={isTop ? handleMouseMove : undefined}
+                onMouseUp={isTop ? handleMouseUp : undefined}
+                onClick={
+                  isTop ? () => setIsFlipped((prev) => !prev) : undefined
+                }
+              >
+                <div className="flash-card-status">Study again</div>
+                <div
+                  className={`flash-card--inner ${
+                    isTop && isFlipped ? "flip" : ""
+                  }`}
+                >
+                  <div className="flash-card--front">
+                    <h1>{card.english}</h1>
+                  </div>
+                  <div className="flash-card--back">
+                    <h1>{card.turkish}</h1>
+                  </div>
+                </div>
               </div>
-              <div className="flash-card--back">
-                <h1>{Vocabulary[activeIndex].turkish}</h1>
-              </div>
-            </div>
-          </div>
-        )}
+            );
+          })
+          .reverse()}
       </div>
 
       <button className="undo-swipe" onClick={handleUndo}>
