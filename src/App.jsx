@@ -11,6 +11,7 @@ function App() {
     <Router>
       <div className="app-container">
         <Sidebar />
+
         <div className="content">
           <Routes>
             <Route path="/card-type-1" element={<VocabularyCardOne />} />

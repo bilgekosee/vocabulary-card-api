@@ -22,7 +22,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.site-name-title:hover {
+.site-name-short {
+  font-size: 25px;
+  background: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.site-name-title:hover,
+.site-name-short:hover {
   font-size: 25px;
   background: linear-gradient(to top, #898fc3 0%, #878ba6 1%, #be74d9 100%);
   -webkit-background-clip: text;
@@ -116,4 +123,6 @@ li {
 .cards-icon-arrow {
   font-size: 30px;
   color: #1f2937;
+}
+@media (max-width: 610px) {
 }

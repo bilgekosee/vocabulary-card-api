@@ -1,11 +1,16 @@
 .app-container {
   height: auto;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: auto 1fr;
 }
 .content {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
+}
+.sidebar-container {
+  left: 0;
+  top: 0;
   height: auto;
 }

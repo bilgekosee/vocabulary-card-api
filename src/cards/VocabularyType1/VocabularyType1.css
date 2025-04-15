@@ -181,7 +181,7 @@ p:first-of-type {
   color: #000;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 703px) {
   .container,
   .card,
   .card_front,
