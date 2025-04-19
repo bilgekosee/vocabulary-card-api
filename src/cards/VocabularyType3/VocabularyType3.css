@@ -159,3 +159,23 @@
     font-size: 30px;
   }
 }
+@media (max-width: 500px) {
+  .third-card-wrapper {
+    width: 250px;
+    height: 370px;
+  }
+  .third-card-title-wrapper {
+    width: 250px;
+    height: 120px;
+  }
+  .false-section {
+    gap: 10px;
+  }
+  .answer {
+    font-size: 18px;
+    max-width: 200px;
+  }
+  .third-card-title {
+    font-size: 30px;
+  }
+}

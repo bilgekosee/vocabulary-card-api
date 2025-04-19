@@ -146,3 +146,12 @@ button.undo-swipe {
     max-width: 270px;
   }
 }
+@media (max-width: 500px) {
+  .flash-cards {
+    width: 270px;
+    height: 440px;
+  }
+  .flash-card--back h1 {
+    max-width: 250px;
+  }
+}

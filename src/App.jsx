@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./sidebar/sidebar";
 import VocabularyCardOne from "./cards/VocabularyType1/VocabularyType1";
@@ -7,10 +8,17 @@ import VocabularyCardThird from "./cards/VocabularyType3/VocabularyType3";
 import VocabularyCardFourth from "./cards/VocabularyType4/VocabularyType4";
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <Router>
       <div className="app-container">
-        <Sidebar />
+        <div className={`sidebar-main ${isSidebarOpen ? "open" : ""}`}>
+          <Sidebar
+            isOpen={isSidebarOpen}
+            toggleOpen={() => setIsSidebarOpen(!isSidebarOpen)}
+          />
+        </div>
 
         <div className="content">
           <Routes>

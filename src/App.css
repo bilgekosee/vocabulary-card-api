@@ -2,15 +2,56 @@
   height: auto;
   display: grid;
   grid-template-columns: auto 1fr;
+  position: relative;
 }
+
 .content {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
+  height: 100vh;
+  width: 100%;
+  transition: all 0.3s ease;
+  padding: 20px;
+  box-sizing: border-box;
 }
-.sidebar-container {
-  left: 0;
-  top: 0;
-  height: auto;
+@media (max-width: 600px) {
+  .app-container {
+    display: block;
+  }
+
+  .sidebar-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+    z-index: 9999;
+    transition: width 0.3s ease;
+  }
+
+  .sidebar-main.open {
+    width: 300px;
+  }
+
+  .content {
+    width: 100%;
+    margin: 0 auto;
+    filter: none;
+    pointer-events: auto;
+  }
+
+  .sidebar-main.open + .content {
+    filter: blur(2px);
+    pointer-events: none;
+  }
+}
+@media (max-width: 440px) {
+  .app-container {
+    width: auto;
+    position: fixed;
+  }
+  .content {
+    margin-left: 40px;
+  }
 }

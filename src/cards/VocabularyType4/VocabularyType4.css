@@ -118,3 +118,19 @@ body {
     white-space: normal;
   }
 }
+@media (max-width: 500px) {
+  .card-fourth {
+    height: 320px;
+    width: 250px;
+  }
+  .card-fourth-answer p {
+    max-width: 220px;
+  }
+  .card-fourth h1 {
+    max-width: 240px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+}

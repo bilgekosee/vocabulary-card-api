@@ -72,7 +72,6 @@ const VocabularyCardSecond = () => {
         {Vocabulary.slice(Math.max(activeIndex - 3, 0), activeIndex + 1)
           .map((card, i, arr) => {
             const isTop = i === arr.length - 1;
-            const cardIndex = activeIndex - (arr.length - 1 - i);
             const offset = arr.length - 1 - i;
             const rotation = offset === 0 ? 0 : offset % 2 === 0 ? -5 : 5;
 

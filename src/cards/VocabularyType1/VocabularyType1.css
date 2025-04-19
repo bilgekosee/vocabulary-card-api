@@ -199,3 +199,21 @@ p:first-of-type {
     height: 270px;
   }
 }
+@media (max-width: 500px) {
+  .container,
+  .card,
+  .card_front,
+  .card_back {
+    width: 275px;
+    height: 350px;
+    margin: 5px 0;
+  }
+  .turkish-card-wrapper {
+    width: 243px;
+    height: 320px;
+  }
+  .english-card-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+}
