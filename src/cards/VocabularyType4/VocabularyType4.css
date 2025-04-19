@@ -134,3 +134,19 @@ body {
     white-space: normal;
   }
 }
+@media (max-width: 345px) {
+  .card-fourth {
+    height: 300px;
+    width: 220px;
+  }
+  .card-fourth-answer p {
+    max-width: 200px;
+  }
+  .card-fourth h1 {
+    max-width: 200px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+}

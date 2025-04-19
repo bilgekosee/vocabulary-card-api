@@ -155,3 +155,19 @@ button.undo-swipe {
     max-width: 250px;
   }
 }
+
+@media (max-width: 345px) {
+  .flash-cards {
+    width: 240px;
+    height: 380px;
+  }
+  .flash-card--front h1 {
+    max-width: 200px;
+  }
+  .flash-card--back h1 {
+    max-width: 200px;
+  }
+  h1 {
+    font-size: 2.2em;
+  }
+}

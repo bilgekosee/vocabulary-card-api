@@ -217,3 +217,30 @@ p:first-of-type {
     height: 250px;
   }
 }
+
+@media (max-width: 345px) {
+  .container,
+  .card,
+  .card_front,
+  .card_back {
+    width: 230px;
+    height: 310px;
+    margin: 5px 0;
+  }
+  .turkish-card-wrapper {
+    width: 198px;
+    height: 280px;
+  }
+  .turkish-card-wrapper span {
+    font-size: 24px;
+    max-width: 150px;
+  }
+  .english-card-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+  .english-card-wrapper span {
+    font-size: 28px;
+    max-width: 150px;
+  }
+}
