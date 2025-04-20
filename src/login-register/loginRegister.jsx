@@ -25,7 +25,32 @@ const LoginRegister = () => {
       ) : (
         <div className="login-register">
           <div className="login-regiter-title">Register</div>
-          <form className="login-register-form">
+          <form
+            className="login-register-form"
+            onSubmit={async (e) => {
+              e.preventDefault();
+              const username = e.target[0].value;
+              const email = e.target[1].value;
+              const password = e.target[2].value;
+
+              try {
+                const res = await fetch("http://127.0.0.1:3000/register", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ username, email, password }),
+                });
+                if (!res.ok) {
+                  throw new Error(`Sunucu hatası: ${res.status}`);
+                }
+
+                const data = await res.json();
+                alert(data.message);
+              } catch (err) {
+                console.error("İstek hatası:", err.message);
+                alert("İstek başarısız oldu: " + err.message);
+              }
+            }}
+          >
             <input type="text" placeholder="Username *" required />
             <input type="email" placeholder="Email *" required />
             <input type="password" placeholder="Password *" required />
