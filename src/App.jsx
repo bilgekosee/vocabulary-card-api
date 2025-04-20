@@ -8,7 +8,7 @@ import VocabularyCardThird from "./cards/VocabularyType3/VocabularyType3";
 import VocabularyCardFourth from "./cards/VocabularyType4/VocabularyType4";
 import Header from "./header/header";
 
-function App() {
+function App({ darkModeOpen }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
@@ -22,7 +22,7 @@ function App() {
           />
         </div>
 
-        <div className="content">
+        <div className={`content ${darkModeOpen ? "dark" : "light"}`}>
           <Routes>
             <Route path="/card-type-1" element={<VocabularyCardOne />} />
             <Route path="/card-type-2" element={<VocabularyCardSecond />} />

@@ -1,6 +1,18 @@
 .header-container {
-  background-color: #f0f4f8;
-  color: black;
-  padding: 16px;
+  padding: 7px;
   font-size: 20px;
+  display: flex;
+  justify-content: end;
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+.dark-mode-toggle {
+  font-size: 35px;
+}
+.dark {
+  color: #002945;
+}
+.light {
+  color: #ffea00;
 }

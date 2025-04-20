@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   max-width: 350px;
-  background-color: #f0f4f8;
   min-height: 100vh;
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  transition: all 0.3s ease;
 }
 .sidebar-card.close {
   max-width: 70px;
@@ -37,7 +39,7 @@
 }
 
 .card-title {
-  color: #1f2937;
+  color: var(--text-color);
   font-weight: 600;
   font-size: 18px;
 }
@@ -82,7 +84,7 @@ li {
   align-items: center;
   list-style: none;
   animation: fade-in 0.3s ease;
-  color: #1f2937;
+  color: var(--text-color);
   font-size: 16px;
   padding: 5px 0;
 }
@@ -95,7 +97,7 @@ li {
   gap: 20px;
   padding: 10px 0;
   font-size: 18px;
-  color: #1f2937;
+  color: var(--text-color);
   font-weight: normal;
   margin-bottom: 10px;
 }
@@ -117,11 +119,11 @@ li {
 
 .cards-icon {
   font-size: 30px;
-  color: #1f2937;
+  color: var(--text-color);
 }
 .cards-icon-arrow {
   font-size: 30px;
-  color: #1f2937;
+  color: var(--text-color);
 }
 @media (max-width: 610px) {
 }

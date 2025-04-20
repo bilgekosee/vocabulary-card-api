@@ -7,7 +7,7 @@ import { GiRead } from "react-icons/gi";
 import { RiSpeakAiFill } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ darkModeOpen }) => {
   const [isOpen, setİsOpen] = useState(true);
   const [open, setOpen] = useState(true);
   const [readinOpen, setReadingOpen] = useState(false);
@@ -42,7 +42,11 @@ const Header = () => {
     setSpeakingOpen((prevOpen) => !prevOpen);
   };
   return (
-    <div className={`sidebar-card ${isOpen ? "open" : "close"}`}>
+    <div
+      className={`sidebar-card ${isOpen ? "open" : "close"} ${
+        darkModeOpen ? "dark" : "light"
+      }`}
+    >
       <div className="responsie-design">
         <div
           className="name-site"

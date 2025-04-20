@@ -22,7 +22,11 @@ const Header = () => {
   return (
     <div className="header-container">
       <div className="dark-mode-toggle" onClick={toggleDarkMode}>
-        {darkModeOpen ? <MdSunny /> : <MdDarkMode />}
+        {darkModeOpen ? (
+          <MdSunny className="light" />
+        ) : (
+          <MdDarkMode className="dark" />
+        )}
       </div>
     </div>
   );
