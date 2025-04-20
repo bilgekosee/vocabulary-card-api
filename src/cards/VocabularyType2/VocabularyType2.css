@@ -39,6 +39,7 @@ button.undo-swipe {
   margin-top: 20px;
   width: 400px;
   height: 800px;
+  top: 15px;
   position: relative;
   overflow: visible;
   background: none;

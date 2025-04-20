@@ -6,12 +6,14 @@ import VocabularyCardOne from "./cards/VocabularyType1/VocabularyType1";
 import VocabularyCardSecond from "./cards/VocabularyType2/VocabularyType2";
 import VocabularyCardThird from "./cards/VocabularyType3/VocabularyType3";
 import VocabularyCardFourth from "./cards/VocabularyType4/VocabularyType4";
+import Header from "./header/header";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
     <Router>
+      <Header />
       <div className="app-container">
         <div className={`sidebar-main ${isSidebarOpen ? "open" : ""}`}>
           <Sidebar
