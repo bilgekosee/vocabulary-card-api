@@ -14,18 +14,18 @@ const LoginRegister = () => {
   return (
     <div className="login-register-container">
       {isLogin ? (
-        <div className="login">
-          <div className="login-title">Login</div>
-          <form>
+        <div className="login-register">
+          <div className="login-regiter-title">Login</div>
+          <form className="login-register-form">
             <input type="email" placeholder="Email *" required />
             <input type="password" placeholder="Password *" required />
             <button type="submit">Login</button>
           </form>
         </div>
       ) : (
-        <div className="register">
-          <div className="register-title">Register</div>
-          <form>
+        <div className="login-register">
+          <div className="login-regiter-title">Register</div>
+          <form className="login-register-form">
             <input type="text" placeholder="Username *" required />
             <input type="email" placeholder="Email *" required />
             <input type="password" placeholder="Password *" required />

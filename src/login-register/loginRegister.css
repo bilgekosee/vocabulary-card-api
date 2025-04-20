@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100..900&display=swap");
+.login-register-container {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--loginregister-bg);
+  border-radius: 20px;
+}
+.login-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  flex-direction: column;
+  gap: 10px;
+}
+.login-register-form input {
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: aliceblue;
+  color: black;
+}
+.login-regiter-title {
+  font-family: "Roboto Slab", serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+.login-register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
