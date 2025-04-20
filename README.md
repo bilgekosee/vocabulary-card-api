@@ -2,7 +2,7 @@
 
 
 # DEMO
- [WISE VOCABULARY CARD](https://billg-vocabularycard.netlify.app/)
+ [WISE VOCABULARY CARD API](https://vocabulary-card-api.netlify.app/)
 
  
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
