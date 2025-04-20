@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./header.css";
 import { MdDarkMode, MdSunny } from "react-icons/md";
-
+import { Link } from "react-router-dom";
 const Header = () => {
   const [darkModeOpen, setDarkModeOpen] = useState(false);
 
@@ -21,6 +21,13 @@ const Header = () => {
 
   return (
     <div className="header-container">
+      <Link to="/login?type=login" className="login-register-header">
+        Login
+      </Link>
+
+      <Link to="/login?type=register" className="login-register-header">
+        Register
+      </Link>
       <div className="dark-mode-toggle" onClick={toggleDarkMode}>
         {darkModeOpen ? (
           <MdSunny className="light" />
