@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
 const User = require("./models/User");
+const Word = require("./models/Word");
 
 mongoose
   .connect("mongodb://127.0.0.1:27017/vocabulary")
@@ -50,6 +51,31 @@ app.post("/login", async (req, res) => {
   } catch (err) {
     console.err("giriş hatası", err);
     res.status(500).json({ message: "giriş sırasında hata oluştu" });
+  }
+});
+
+app.post("/add-word", async (req, res) => {
+  const { english, turkish, cardType } = req.body;
+
+  try {
+    const newWord = new Word({ english, turkish, cardType });
+    await newWord.save();
+    res.json({ message: "Kelime eklendi!" });
+  } catch (err) {
+    console.error("Kelime ekleme hatası:", err);
+    res.status(500).json({ message: "Kelime eklenemedi." });
+  }
+});
+
+app.get("/words/:cardType", async (req, res) => {
+  const { cardType } = req.params;
+
+  try {
+    const words = await Word.find({ cardType });
+    res.json(words);
+  } catch (err) {
+    console.error("Kelimeleri getirme hatası:", err);
+    res.status(500).json({ message: "Kelimeler getirilemedi." });
   }
 });
 

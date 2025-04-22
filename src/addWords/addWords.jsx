@@ -10,7 +10,7 @@ const AddWords = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://127.0.0.1:3000/addWord", {
+      const res = await fetch("http://127.0.0.1:3000/add-word", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ english, turkish, cardType }),
