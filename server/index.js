@@ -1,5 +1,12 @@
+const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
+const User = require("./models/User");
+
+mongoose
+  .connect("mongodb://127.0.0.1:27017/vocabulary")
+  .then(() => console.log("Connected!"))
+  .catch((error) => console.error("mongodb hatası", error));
 
 const app = express();
 
@@ -16,10 +23,34 @@ app.get("/", (req, res) => {
   res.send("yesss backend çalışıyooo");
 });
 
-app.post("/register", (req, res) => {
+app.post("/register", async (req, res) => {
   const { username, email, password } = req.body;
-  console.log("new user:", username, email, password);
-  res.json({ message: "user successful" });
+
+  try {
+    const newUser = new User({ username, email, password });
+    await newUser.save();
+
+    res.json({ message: "Kayıt başarılı!" });
+  } catch (err) {
+    console.error("Kayıt hatası:", err);
+    res.status(500).json({ message: "Kayıt sırasında hata oluştu." });
+  }
+});
+
+app.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const user = await User.findOne({ email, password });
+    if (user) {
+      res.json({ message: "giriş başarılı" });
+    } else {
+      res.status(500).json({ message: "geçersiz bilgiler" });
+    }
+  } catch (err) {
+    console.err("giriş hatası", err);
+    res.status(500).json({ message: "giriş sırasında hata oluştu" });
+  }
 });
 
 const PORT = process.env.PORT || 3000;
