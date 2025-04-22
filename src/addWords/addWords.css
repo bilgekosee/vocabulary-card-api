@@ -23,3 +23,10 @@
   color: var(--text-color);
   padding-left: 30px;
 }
+.addword-wrapper select {
+  width: 350px;
+  height: 50px;
+  background-color: var(--loginregister-bg);
+  color: var(--text-color);
+  border-radius: 3px;
+}
