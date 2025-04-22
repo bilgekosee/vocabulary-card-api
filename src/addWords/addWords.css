@@ -1,0 +1,25 @@
+.addword-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 500px;
+  background-color: var(--loginregister-bg);
+  border-radius: 10px;
+}
+.addword-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.addword-wrapper input {
+  width: 350px;
+  height: 50px;
+  background-color: var(--loginregister-bg);
+  color: var(--text-color);
+  border-radius: 20px;
+}
+.addword-wrapper input::placeholder {
+  color: var(--text-color);
+  padding-left: 30px;
+}

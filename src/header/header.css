@@ -4,7 +4,6 @@
   gap: 30px;
   padding: 7px;
   font-size: 20px;
-  display: flex;
   justify-content: end;
   background-color: var(--header-bg);
   color: var(--text-color);
@@ -12,6 +11,7 @@
 }
 .dark-mode-toggle {
   font-size: 35px;
+  display: flex;
 }
 .dark {
   color: #002945;
