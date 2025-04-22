@@ -30,7 +30,7 @@ app.post("/register", async (req, res) => {
     const newUser = new User({ username, email, password });
     await newUser.save();
 
-    res.json({ message: "Kayıt başarılı!" });
+    res.json({ message: "Kayıt başarılı!", redirect: "/login" });
   } catch (err) {
     console.error("Kayıt hatası:", err);
     res.status(500).json({ message: "Kayıt sırasında hata oluştu." });
