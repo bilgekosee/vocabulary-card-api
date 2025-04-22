@@ -28,6 +28,9 @@ const Header = () => {
       <Link to="/login?type=register" className="login-register-header">
         Register
       </Link>
+      <Link to="/addWord" className="login-register-header">
+        <button>Add Word</button>
+      </Link>
       <div className="dark-mode-toggle" onClick={toggleDarkMode}>
         {darkModeOpen ? (
           <MdSunny className="light" />
