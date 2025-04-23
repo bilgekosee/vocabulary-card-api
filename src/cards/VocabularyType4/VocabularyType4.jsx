@@ -1,29 +1,45 @@
 import "./VocabularyType4.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MdTranslate } from "react-icons/md";
 import {
   PiArrowCircleRightDuotone,
   PiArrowCircleLeftDuotone,
 } from "react-icons/pi";
-import Vocabulary from "../../data/vocabulary_complete.json";
 
 const VocabularyCardFourth = () => {
+  const [vocabulary, setVocabulary] = useState([]);
   const [indexCardFour, setIndexCardFour] = useState(0);
   const [flipCard, setFlipCard] = useState(false);
-  const currentWord = Vocabulary[indexCardFour];
+  const currentWord = vocabulary[indexCardFour];
+
+  useEffect(() => {
+    const fetchWords = async () => {
+      try {
+        const res = await fetch("http://127.0.0.1:3000/words/4");
+        const data = await res.json();
+        setVocabulary(data);
+      } catch (err) {
+        console.error("Veri çekme hatası:", err);
+      }
+    };
+
+    fetchWords();
+  }, []);
 
   const nextCardFour = () => {
     setIndexCardFour((prevIndex) =>
-      prevIndex < Vocabulary.length - 1 ? prevIndex + 1 : 0
+      prevIndex < vocabulary.length - 1 ? prevIndex + 1 : 0
     );
     setFlipCard(false);
   };
   const prevCardFour = () => {
     setIndexCardFour((prevIndex) =>
-      prevIndex > 0 ? prevIndex - 1 : Vocabulary.length - 1
+      prevIndex > 0 ? prevIndex - 1 : vocabulary.length - 1
     );
     setFlipCard(false);
   };
+
+  if (!currentWord) return <div>Yükleniyor...</div>;
   return (
     <div className="container-card-fourth">
       <div className="card-fourth">
