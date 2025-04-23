@@ -1,32 +1,48 @@
 import "./VocabularyType3.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import {
   BiSolidLeftArrowCircle,
   BiSolidRightArrowCircle,
 } from "react-icons/bi";
-import Vocabulary from "../../data/vocabulary_complete.json";
 
 const VocabularyCardThird = () => {
+  const [vocabulary, setVocabulary] = useState([]);
   const [isApproved, setIsApproved] = useState(null);
   const [index, setIndex] = useState(0);
   const [flippedCard, setFlippedCard] = useState(false);
-  const currentWord = Vocabulary[index];
+  const currentWord = vocabulary[index];
+
+  useEffect(() => {
+    const fetchWords = async () => {
+      try {
+        const res = await fetch("http://127.0.0.1:3000/words/3");
+        const data = await res.json();
+        setVocabulary(data);
+      } catch (err) {
+        console.error("Veri çekme hatası:", err);
+      }
+    };
+
+    fetchWords();
+  }, []);
 
   const nextCard = () => {
     setIndex((prevIndex) =>
-      prevIndex < Vocabulary.length - 1 ? prevIndex + 1 : 0
+      prevIndex < vocabulary.length - 1 ? prevIndex + 1 : 0
     );
     setFlippedCard(false);
     setIsApproved(null);
   };
   const prevCard = () => {
     setIndex((prevIndex) =>
-      prevIndex > 0 ? prevIndex - 1 : Vocabulary.length - 1
+      prevIndex > 0 ? prevIndex - 1 : vocabulary.length - 1
     );
     setFlippedCard(false);
     setIsApproved(null);
   };
+
+  if (!currentWord) return <div>Yükleniyor...</div>;
 
   return (
     <div className="third-card-container">
