@@ -1,14 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./VocabularyType2.css";
-import Vocabulary from "../../data/vocabulary_complete.json";
 
 const VocabularyCardSecond = () => {
-  const [activeIndex, setActiveIndex] = useState(Vocabulary.length - 1);
+  const [vocabulary, setVocabulary] = useState([]);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [transform, setTransform] = useState("none");
   const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+    const fetchWords = async () => {
+      try {
+        const res = await fetch("http://127.0.0.1:3000/words/2");
+        const data = await res.json();
+        setVocabulary(data);
+        setActiveIndex(data.length - 1);
+      } catch (err) {
+        console.error("Veri çekme hatası:", err);
+      }
+    };
+
+    fetchWords();
+  }, []);
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
@@ -61,15 +76,18 @@ const VocabularyCardSecond = () => {
   };
 
   const handleUndo = () => {
-    if (activeIndex < Vocabulary.length - 1) {
+    if (activeIndex < vocabulary.length - 1) {
       setActiveIndex((prev) => prev + 1);
     }
   };
 
+  if (vocabulary.length === 0) return <div>Yükleniyor...</div>;
+
   return (
     <div className="typetwo-card-container">
       <div className="flash-cards">
-        {Vocabulary.slice(Math.max(activeIndex - 3, 0), activeIndex + 1)
+        {vocabulary
+          .slice(Math.max(activeIndex - 3, 0), activeIndex + 1)
           .map((card, i, arr) => {
             const isTop = i === arr.length - 1;
             const offset = arr.length - 1 - i;
