@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { use, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./sidebar/sidebar";
 import VocabularyCardOne from "./cards/VocabularyType1/VocabularyType1";
@@ -11,10 +11,11 @@ import LoginRegister from "./login-register/loginRegister";
 import AddWords from "./addWords/addWords";
 function App({ darkModeOpen }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
   return (
     <Router>
-      <Header />
+      <Header isLoggedIn={isLoggedIn} setLoggedIn={setLoggedIn} />
       <div className="app-container">
         <div className={`sidebar-main ${isSidebarOpen ? "open" : ""}`}>
           <Sidebar
@@ -25,7 +26,10 @@ function App({ darkModeOpen }) {
 
         <div className={`content ${darkModeOpen ? "dark" : "light"}`}>
           <Routes>
-            <Route path="/login" element={<LoginRegister />} />
+            <Route
+              path="/login"
+              element={<LoginRegister setLoggedIn={setLoggedIn} />}
+            />
             <Route path="/addWord" element={<AddWords />} />
             <Route path="/card-type-1" element={<VocabularyCardOne />} />
             <Route path="/card-type-2" element={<VocabularyCardSecond />} />

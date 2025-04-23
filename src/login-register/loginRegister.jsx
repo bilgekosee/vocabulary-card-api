@@ -2,7 +2,7 @@ import "./loginRegister.css";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-const LoginRegister = () => {
+const LoginRegister = ({ setLoggedIn }) => {
   const navigate = useNavigate();
 
   const location = useLocation();
@@ -40,6 +40,7 @@ const LoginRegister = () => {
 
                 const data = await res.json();
                 alert(data.message);
+                setLoggedIn(true);
                 navigate("/card-type-1");
               } catch (err) {
                 console.error("İstek hatası:", err.message);
