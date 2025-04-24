@@ -5,15 +5,16 @@ import {
   PiArrowFatLineRightDuotone,
 } from "react-icons/pi";
 
-const VocabularyCardOne = () => {
+const VocabularyCardOne = ({ userId }) => {
   const [vocabulary, setVocabulary] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
 
   useEffect(() => {
+    if (!userId) return;
     const fetchWords = async () => {
       try {
-        const res = await fetch("http://127.0.0.1:3000/words/1");
+        const res = await fetch(`http://127.0.0.1:3000/words/1/${userId}`);
         const data = await res.json();
         setVocabulary(data);
       } catch (err) {
@@ -22,7 +23,7 @@ const VocabularyCardOne = () => {
     };
 
     fetchWords();
-  }, []);
+  }, [userId]);
   const currentWord = vocabulary[currentIndex];
 
   const handleNext = () => {
@@ -43,22 +44,22 @@ const VocabularyCardOne = () => {
 
   return (
     <div className="type-one-wrapper">
-      <div class="container" ontouchstart="this.classList.toggle('hover');">
+      <div className="container" onTouchStart="this.classList.toggle('hover');">
         <div
           className={`card ${flipped ? "hover" : ""}`}
           onClick={() => setFlipped(!flipped)}
         >
-          <div class="card_front">
-            <h1 class="card-symbol">
+          <div className="card_front">
+            <h1 className="card-symbol">
               <div className="english-card-wrapper">
                 <span>{currentWord.english}</span>
               </div>
             </h1>
           </div>
 
-          <div class="card_back">
-            <h1 class="card-symbol">
-              <div class="turkish-card-wrapper">
+          <div className="card_back">
+            <h1 className="card-symbol">
+              <div className="turkish-card-wrapper">
                 <span>{currentWord.turkish}</span>
               </div>
             </h1>

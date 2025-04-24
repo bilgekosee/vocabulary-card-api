@@ -13,7 +13,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://vocabulary-card-api.netlify.app",
+    ],
     methods: ["GET", "POST"],
     credentials: true,
   })
@@ -44,7 +47,7 @@ app.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ email, password });
     if (user) {
-      res.json({ message: "giriş başarılı" });
+      res.json({ message: "giriş başarılı", userId: user._id });
     } else {
       res.status(500).json({ message: "geçersiz bilgiler" });
     }
@@ -55,10 +58,10 @@ app.post("/login", async (req, res) => {
 });
 
 app.post("/add-word", async (req, res) => {
-  const { english, turkish, cardType } = req.body;
+  const { english, turkish, cardType, userId } = req.body;
 
   try {
-    const newWord = new Word({ english, turkish, cardType });
+    const newWord = new Word({ english, turkish, cardType, userId });
     await newWord.save();
     res.json({ message: "Kelime eklendi!" });
   } catch (err) {
@@ -67,11 +70,11 @@ app.post("/add-word", async (req, res) => {
   }
 });
 
-app.get("/words/:cardType", async (req, res) => {
-  const { cardType } = req.params;
+app.get("/words/:cardType/:userId", async (req, res) => {
+  const { cardType, userId } = req.params;
 
   try {
-    const words = await Word.find({ cardType });
+    const words = await Word.find({ cardType, userId });
     res.json(words);
   } catch (err) {
     console.error("Kelimeleri getirme hatası:", err);

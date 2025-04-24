@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./addWords.css";
-import { useNavigate } from "react-router-dom";
-const AddWords = () => {
+const AddWords = ({ userId }) => {
   const [english, setEnglish] = useState("");
   const [turkish, setTurkish] = useState("");
   const [cardType, setCardType] = useState("4");
@@ -13,7 +12,7 @@ const AddWords = () => {
       const res = await fetch("http://127.0.0.1:3000/add-word", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ english, turkish, cardType }),
+        body: JSON.stringify({ english, turkish, cardType, userId }),
       });
 
       const data = await res.json();

@@ -2,7 +2,7 @@ import "./loginRegister.css";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-const LoginRegister = ({ setLoggedIn }) => {
+const LoginRegister = ({ setLoggedIn, setUserId }) => {
   const navigate = useNavigate();
 
   const location = useLocation();
@@ -39,7 +39,7 @@ const LoginRegister = ({ setLoggedIn }) => {
                 }
 
                 const data = await res.json();
-                alert(data.message);
+                setUserId(data.userId);
                 setLoggedIn(true);
                 navigate("/card-type-1");
               } catch (err) {

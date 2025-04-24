@@ -2,10 +2,15 @@ import { useState, useEffect } from "react";
 import "./header.css";
 import { MdDarkMode, MdSunny } from "react-icons/md";
 import { Link } from "react-router-dom";
-const Header = ({ isLoggedIn, setLoggedIn }) => {
+import { useNavigate } from "react-router-dom";
+const Header = ({ isLoggedIn, setLoggedIn, setUserId }) => {
   const [darkModeOpen, setDarkModeOpen] = useState(false);
+  const navigate = useNavigate();
+
   const handleLogout = () => {
     setLoggedIn(false);
+    setUserId(null);
+    navigate("/login?type=login");
   };
 
   const toggleDarkMode = () => {
