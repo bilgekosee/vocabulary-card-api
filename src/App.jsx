@@ -64,15 +64,33 @@ function App({ darkModeOpen }) {
             />
             <Route
               path="/card-type-2"
-              element={<VocabularyCardSecond userId={userId} />}
+              element={
+                userId ? (
+                  <VocabularyCardSecond userId={userId} />
+                ) : (
+                  <div>Lütfen giriş yapınız.</div>
+                )
+              }
             />
             <Route
               path="/card-type-3"
-              element={<VocabularyCardThird userId={userId} />}
+              element={
+                userId ? (
+                  <VocabularyCardThird userId={userId} />
+                ) : (
+                  <div>Lütfen giriş yapınız.</div>
+                )
+              }
             />
             <Route
               path="/card-type-4"
-              element={<VocabularyCardFourth userId={userId} />}
+              element={
+                userId ? (
+                  <VocabularyCardFourth userId={userId} />
+                ) : (
+                  <div>Lütfen giriş yapınız.</div>
+                )
+              }
             />
           </Routes>
         </div>

@@ -6,16 +6,17 @@ import {
   PiArrowCircleLeftDuotone,
 } from "react-icons/pi";
 
-const VocabularyCardFourth = () => {
+const VocabularyCardFourth = ({ userId }) => {
   const [vocabulary, setVocabulary] = useState([]);
   const [indexCardFour, setIndexCardFour] = useState(0);
   const [flipCard, setFlipCard] = useState(false);
   const currentWord = vocabulary[indexCardFour];
 
   useEffect(() => {
+    if (!userId) return;
     const fetchWords = async () => {
       try {
-        const res = await fetch("http://127.0.0.1:3000/words/4");
+        const res = await fetch(`http://127.0.0.1:3000/words/4/${userId}`);
         const data = await res.json();
         setVocabulary(data);
       } catch (err) {
@@ -24,7 +25,7 @@ const VocabularyCardFourth = () => {
     };
 
     fetchWords();
-  }, []);
+  }, [userId]);
 
   const nextCardFour = () => {
     setIndexCardFour((prevIndex) =>

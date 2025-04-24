@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./VocabularyType2.css";
 
-const VocabularyCardSecond = () => {
+const VocabularyCardSecond = ({ userId }) => {
   const [vocabulary, setVocabulary] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
@@ -11,9 +11,10 @@ const VocabularyCardSecond = () => {
   const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
+    if (!userId) return;
     const fetchWords = async () => {
       try {
-        const res = await fetch("http://127.0.0.1:3000/words/2");
+        const res = await fetch(`http://127.0.0.1:3000/words/2/${userId}`);
         const data = await res.json();
         setVocabulary(data);
         setActiveIndex(data.length - 1);
@@ -23,7 +24,7 @@ const VocabularyCardSecond = () => {
     };
 
     fetchWords();
-  }, []);
+  }, [userId]);
 
   const handleMouseDown = (e) => {
     setIsDragging(true);

@@ -6,7 +6,7 @@ import {
   BiSolidRightArrowCircle,
 } from "react-icons/bi";
 
-const VocabularyCardThird = () => {
+const VocabularyCardThird = ({ userId }) => {
   const [vocabulary, setVocabulary] = useState([]);
   const [isApproved, setIsApproved] = useState(null);
   const [index, setIndex] = useState(0);
@@ -14,9 +14,10 @@ const VocabularyCardThird = () => {
   const currentWord = vocabulary[index];
 
   useEffect(() => {
+    if (!userId) return;
     const fetchWords = async () => {
       try {
-        const res = await fetch("http://127.0.0.1:3000/words/3");
+        const res = await fetch(`http://127.0.0.1:3000/words/3/${userId}`);
         const data = await res.json();
         setVocabulary(data);
       } catch (err) {
@@ -25,7 +26,7 @@ const VocabularyCardThird = () => {
     };
 
     fetchWords();
-  }, []);
+  }, [userId]);
 
   const nextCard = () => {
     setIndex((prevIndex) =>
