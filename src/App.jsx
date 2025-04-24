@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./sidebar/sidebar";
 import VocabularyCardOne from "./cards/VocabularyType1/VocabularyType1";
@@ -14,6 +14,16 @@ function App({ darkModeOpen }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [userId, setUserId] = useState(null);
+
+  useEffect(() => {
+    const storedUserId = localStorage.getItem("userId");
+    const storedIsLOggedIn = localStorage.getItem("isLoggedIn");
+
+    if (storedUserId && storedIsLOggedIn === "true") {
+      setUserId(storedUserId);
+      setLoggedIn(true);
+    }
+  }, []);
 
   return (
     <Router>

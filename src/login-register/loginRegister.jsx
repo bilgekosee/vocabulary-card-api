@@ -41,6 +41,8 @@ const LoginRegister = ({ setLoggedIn, setUserId }) => {
                 const data = await res.json();
                 setUserId(data.userId);
                 setLoggedIn(true);
+                localStorage.setItem("userId", data.userId);
+                localStorage.setItem("isLoggedIn", "true");
                 navigate("/card-type-1");
               } catch (err) {
                 console.error("İstek hatası:", err.message);

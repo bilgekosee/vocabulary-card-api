@@ -10,6 +10,8 @@ const Header = ({ isLoggedIn, setLoggedIn, setUserId }) => {
   const handleLogout = () => {
     setLoggedIn(false);
     setUserId(null);
+    localStorage.removeItem("userId");
+    localStorage.removeItem("isLoggedIn");
     navigate("/login?type=login");
   };
 
