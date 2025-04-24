@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
+const bcrypt = require("bcrypt");
 const User = require("./models/User");
 const Word = require("./models/Word");
 
@@ -31,7 +32,8 @@ app.post("/register", async (req, res) => {
   const { username, email, password } = req.body;
 
   try {
-    const newUser = new User({ username, email, password });
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const newUser = new User({ username, email, password: hashedPassword });
     await newUser.save();
 
     res.json({ message: "Kayıt başarılı!", redirect: "/login" });
@@ -45,9 +47,15 @@ app.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    const user = await User.findOne({ email, password });
+    const user = await User.findOne({ email });
     if (user) {
-      res.json({ message: "giriş başarılı", userId: user._id });
+      const isMatch = await bcrypt.compare(password, user.password);
+
+      if (isMatch) {
+        res.json({ message: "giriş başarılı", userId: user._id });
+      } else {
+        res.status(400).json({ message: "geçersiz şifre" });
+      }
     } else {
       res.status(500).json({ message: "geçersiz bilgiler" });
     }
